@@ -119,8 +119,8 @@ export default function Home() {
 										{PRODUCTS.map((product) => (
 											<a href={product.url} target={'_blank'} key={product.name}>
 												<div key={product.name} className="bg-black rounded-md p-4 font-mono border-[1px] border-black hover:border-[#00ff005d] transition-all duration-200 h-full">
-													<img src={product.cover} alt={product.name} className="w-full  rounded-md" />
-													<p className="text-sm font-bold mt-2 w-full">{product.name}</p>
+													<img src={product.cover} alt={product.name} className="w-full rounded-md" />
+													<p className="text-sm font-bold mt-2 w-fit">{product.name}</p>
 													<p className="text-sm font-bold text-[#00ff00]">{product.price}</p>
 												</div>
 											</a>
