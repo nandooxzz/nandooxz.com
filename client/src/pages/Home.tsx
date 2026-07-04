@@ -108,9 +108,8 @@ export default function Home() {
 							</Card>
 
 						</TabsContent>
-						<TabsContent value="shop">
-
-							<Card>
+						<TabsContent value="shop" className=''>
+							<Card className='max-h-[500px] overflow-y-scroll'>
 								<CardHeader>
 									<CardTitle>Products</CardTitle>
 								</CardHeader>
@@ -143,12 +142,14 @@ export default function Home() {
 										))}
 									</div>
 								</CardContent>
+								<br/><br/><br/>
 								<CardFooter >
 									<div className="flex flex-col gap-2">
 										<Button onClick={() => setActiveTab("about")} className='bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white w-[40%]'>Go Back <ArrowLeft /></Button>
 										<span className='text-gray-600 text-[0.7em]'>All payments are processed securely through Payhip.</span>
 									</div>
 								</CardFooter>
+								<br/><br/><br/>
 							</Card>
 
 						</TabsContent>
