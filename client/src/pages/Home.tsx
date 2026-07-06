@@ -109,7 +109,7 @@ export default function Home() {
 
 						</TabsContent>
 						<TabsContent value="shop" className=''>
-							<Card className='max-h-[500px] overflow-y-scroll'>
+							<Card className='max-h-[500px] overflow-y-scroll p-3'>
 								<CardHeader>
 									<CardTitle>Products</CardTitle>
 								</CardHeader>
@@ -149,7 +149,7 @@ export default function Home() {
 										<span className='text-gray-600 text-[0.7em]'>All payments are processed securely through Payhip.</span>
 									</div>
 								</CardFooter>
-								<br/>
+								
 							</Card>
 
 						</TabsContent>
