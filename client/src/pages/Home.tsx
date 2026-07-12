@@ -155,6 +155,12 @@ export default function Home() {
 
 						</TabsContent>
 					</Tabs>
+					<br />
+					<Link href="/privacy-policy">
+							<a className="text-gray-400 hover:text-lime-500 transition-colors text-sm">
+								Privacy Policy
+							</a>
+					</Link>
 				</motion.div>
 			</section>
 		</div>
