@@ -240,6 +240,7 @@ export default defineConfig({
       ".manusvm.computer",
       "localhost",
       "127.0.0.1",
+      "device-lecturer-cannon.ngrok-free.dev"
     ],
     fs: {
       strict: true,
