@@ -45,6 +45,7 @@ const PRODUCTS = [
 ]
 
 const LICENSES = [
+	{name: 'Basic License', url:"https://payhip.com/b/euYFz", price: '$20.90'},
 	{name: 'Premium License', url: 'https://payhip.com/b/Rnp8h', price: '$49.90'},
 	{name : 'Unlimited License', url: 'https://payhip.com/b/3Q4EJ', price: '$79.90'},
 	{name: 'Exclusive License', url: 'https://payhip.com/b/AcOQj', price: '$149.90'},
