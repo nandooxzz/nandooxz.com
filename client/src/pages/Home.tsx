@@ -34,6 +34,7 @@ import { Link } from 'wouter';
 const SOCIALS = [
 	{ name: 'Spotify', url: 'https://open.spotify.com/artist/3XQcfKwJ2V7A953V4BbI0H', color: '#00FF00', icon: <FaSpotify /> },
 	{ name: 'Youtube', url: 'https://www.youtube.com/@prod.nandooxz', color: '#fb2c36', icon: <FaYoutube /> },
+	{ name: '2nd Channel', url: 'https://www.youtube.com/@prodnandooxz2', color: '#c02cfb', icon: <FaYoutube /> },
 	{ name: 'Instagram', url: 'https://www.instagram.com/prod.nandooxz/', color: '#f0f0f0', icon: <FaInstagram /> },
 	{ name: 'Soundcloud', url: 'https://soundcloud.com/prodnandooxz', color: '#F97316', icon: <FaSoundcloud /> },
 ];
@@ -45,10 +46,9 @@ const PRODUCTS = [
 ]
 
 const LICENSES = [
-	{name: 'Basic License', url:"https://payhip.com/b/euYFz", price: '$20.90'},
-	{name: 'Premium License', url: 'https://payhip.com/b/Rnp8h', price: '$49.90'},
-	{name : 'Unlimited License', url: 'https://payhip.com/b/3Q4EJ', price: '$79.90'},
-	{name: 'Exclusive License', url: 'https://payhip.com/b/AcOQj', price: '$149.90'},
+	{name: 'Premium License', url: 'https://payhip.com/b/Rnp8h', price: '$59.90'},
+	{name : 'Unlimited License', url: 'https://payhip.com/b/3Q4EJ', price: '$89.90'},
+	{name: 'Exclusive License', url: 'https://payhip.com/b/AcOQj', price: '$209.90'},
 ]
 
 export default function Home() {
@@ -97,8 +97,8 @@ export default function Home() {
 									</CardAction>
 								</CardHeader>
 								<CardContent className='flex flex-col gap-2'>
-									<a href={'https://payhip.com/prodnandooxz'} target={'_blank'}><Button className='w-full hover:bg-gray-700 bg-black border-gray-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><path fill="#fff" d="M3.695 0A3.696 3.696 0 0 0 0 3.695v12.92A7.384 7.384 0 0 0 7.385 24h12.92A3.696 3.696 0 0 0 24 20.305V0zm11.653 5.604a3.88 3.88 0 0 1 .166 0a3.88 3.88 0 0 1 2.677 1.132a3.88 3.88 0 0 1 0 5.48l-.36.356c-1.826-1.825-3.648-3.656-5.476-5.482l.358-.354a3.88 3.88 0 0 1 2.635-1.132m-6.627.125a3.88 3.88 0 0 1 2.566 1c2.068 2.062 4.127 4.133 6.192 6.199l-5.481 5.482l-6.19-6.203C3.549 9.7 5.346 5.702 8.722 5.729zm-1.744 1.71a.464.464 0 0 0-.465.465v1.817c0 .256.208.463.465.463h1.816a.464.464 0 0 0 .463-.463l.008-1.817A.464.464 0 0 0 8.8 7.44H6.977z"/></svg> Payhip Store ($)</Button></a>
-									<a href={'https://www.beatstars.com/prodnandooxz'} target={'_blank'}><Button className='w-full hover:bg-red-700 bg-black border-red-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#ffffff"><path fill="#fff" d="m17.217 11.996l-3.308 1.079v3.478l-2.052-2.818l-3.309 1.079l2.043-2.818l-2.043-2.819l3.31 1.08l2.05-2.819v3.487zm0 0v7.277H6.854V4.584h10.363zl4.585-1.49v-7.67L19.135 0H2.198v24h16.92l2.684-2.685v-7.83z"/></svg> Beatstars (ALT $)</Button></a>
+									<a href={'https://www.beatstars.com/prodnandooxz'} target={'_blank'}><Button className='w-full hover:bg-red-700 bg-black border-red-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#ffffff"><path fill="#fff" d="m17.217 11.996l-3.308 1.079v3.478l-2.052-2.818l-3.309 1.079l2.043-2.818l-2.043-2.819l3.31 1.08l2.05-2.819v3.487zm0 0v7.277H6.854V4.584h10.363zl4.585-1.49v-7.67L19.135 0H2.198v24h16.92l2.684-2.685v-7.83z"/></svg> Beatstars</Button></a>
+									<a href={'https://payhip.com/prodnandooxz'} target={'_blank'}><Button className='w-full hover:bg-gray-700 bg-black border-gray-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><path fill="#fff" d="M3.695 0A3.696 3.696 0 0 0 0 3.695v12.92A7.384 7.384 0 0 0 7.385 24h12.92A3.696 3.696 0 0 0 24 20.305V0zm11.653 5.604a3.88 3.88 0 0 1 .166 0a3.88 3.88 0 0 1 2.677 1.132a3.88 3.88 0 0 1 0 5.48l-.36.356c-1.826-1.825-3.648-3.656-5.476-5.482l.358-.354a3.88 3.88 0 0 1 2.635-1.132m-6.627.125a3.88 3.88 0 0 1 2.566 1c2.068 2.062 4.127 4.133 6.192 6.199l-5.481 5.482l-6.19-6.203C3.549 9.7 5.346 5.702 8.722 5.729zm-1.744 1.71a.464.464 0 0 0-.465.465v1.817c0 .256.208.463.465.463h1.816a.464.464 0 0 0 .463-.463l.008-1.817A.464.464 0 0 0 8.8 7.44H6.977z"/></svg> Payhip Kits</Button></a>
 									{SOCIALS.map((social) => (
 											<a href={social.url} target={'_blank'}><Button style={{ color: social.color }} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6'>{social.icon} {social.name}</Button></a>
 										)
