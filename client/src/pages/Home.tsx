@@ -40,16 +40,16 @@ const SOCIALS = [
 ];
 
 const PRODUCTS = [
-	{name: 'Stash Kit 2026', url: 'https://payhip.com/b/nYZcL', price:'$5', cover:'https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg'},
-	{name: 'June Loop Kit', url: 'https://payhip.com/b/28lcX', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jrmcbfcr10b1eq1fnr13q61s3e1a.jpg'},
-	{name: '1K Drum Kit', url: 'https://payhip.com/b/KVS5a', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jpghhvho19slj6b1keup8r19991f.png'},
+	{name: 'Stash Kit 2026', url: 'https://payhip.com/buy?link=nYZcL', price:'$5', cover:'https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg'},
+	{name: 'June Loop Kit', url: 'https://payhip.com/buy?link=28lcX', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jrmcbfcr10b1eq1fnr13q61s3e1a.jpg'},
+	{name: '1K Drum Kit', url: 'https://payhip.com/buy?link=KVS5a', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jpghhvho19slj6b1keup8r19991f.png'},
 ]
 
-const LICENSES = [
-	{name: 'Premium License', url: 'https://payhip.com/b/Rnp8h', price: '$59.90'},
-	{name : 'Unlimited License', url: 'https://payhip.com/b/3Q4EJ', price: '$89.90'},
-	{name: 'Exclusive License', url: 'https://payhip.com/b/AcOQj', price: '$209.90'},
-]
+// const LICENSES = [
+// 	{name: 'Premium License', url: 'https://payhip.com/b/Rnp8h', price: '$59.90'},
+// 	{name : 'Unlimited License', url: 'https://payhip.com/b/3Q4EJ', price: '$89.90'},
+// 	{name: 'Exclusive License', url: 'https://payhip.com/b/AcOQj', price: '$209.90'},
+// ]
 
 export default function Home() {
 	const [activeTab, setActiveTab] = useState('about');
@@ -118,7 +118,6 @@ export default function Home() {
 									<CardTitle>Products</CardTitle>
 								</CardHeader>
 								<CardContent>
-									<h3 className="text-lg text-left font-bold">Kits</h3> <br/>
 									<div className="grid grid-cols-3 gap-2 overflow-x-scroll">
 										{PRODUCTS.map((product) => (
 											<a href={product.url} target={'_blank'} key={product.name}>
@@ -133,7 +132,7 @@ export default function Home() {
 
 									<br/>
 
-									<h3 className="text-lg text-left font-bold">Licenses</h3> <br/>
+									{/* <h3 className="text-lg text-left font-bold">Licenses</h3> <br/>
 									<div className="w-full grid grid-cols-3 gap-2 overflow-x-scroll">
 										{LICENSES.map((license) => (
 											<a href={license.url} target={'_blank'} key={license.name}>
@@ -144,11 +143,11 @@ export default function Home() {
 												</div>
 											</a>
 										))}
-									</div>
+									</div> */}
 
 									<br />
 
-									<a href={'https://www.beatstars.com/prodnandooxz'} target={'_blank'}><Button className='w-full bg-red-700 hover:bg-red-950 border-red-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#ffffff"><path fill="#fff" d="m17.217 11.996l-3.308 1.079v3.478l-2.052-2.818l-3.309 1.079l2.043-2.818l-2.043-2.819l3.31 1.08l2.05-2.819v3.487zm0 0v7.277H6.854V4.584h10.363zl4.585-1.49v-7.67L19.135 0H2.198v24h16.92l2.684-2.685v-7.83z"/></svg> Beatstars</Button></a>
+									{/* <a href={'https://www.beatstars.com/prodnandooxz'} target={'_blank'}><Button className='w-full bg-red-700 hover:bg-red-950 border-red-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#ffffff"><path fill="#fff" d="m17.217 11.996l-3.308 1.079v3.478l-2.052-2.818l-3.309 1.079l2.043-2.818l-2.043-2.819l3.31 1.08l2.05-2.819v3.487zm0 0v7.277H6.854V4.584h10.363zl4.585-1.49v-7.67L19.135 0H2.198v24h16.92l2.684-2.685v-7.83z"/></svg> Beatstars</Button></a> */}
 								
 									<br />
 								</CardContent>
@@ -156,7 +155,7 @@ export default function Home() {
 								<CardFooter >
 									<div className="flex flex-row gap-2 items-center">
 										<Button onClick={() => setActiveTab("about")} className='bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white w-[40%]'>Go Back <ArrowLeft /></Button>
-										<span className='text-gray-600 text-[0.7em] text-right'>All payments are processed securely through Payhip/Beatstars.</span>
+										<span className='text-gray-600 text-[0.7em] text-right'>All payments are processed securely through Payhip.</span>
 									</div>
 								</CardFooter>
 								
