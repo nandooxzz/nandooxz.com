@@ -2,10 +2,11 @@ import { color, motion } from 'framer-motion';
 import { FallingPattern } from '@/components/ui/falling-pattern';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { FaSpotify, FaInstagram, FaYoutube, FaSoundcloud } from 'react-icons/fa';
+import { FaSpotify, FaInstagram, FaYoutube, FaSoundcloud, FaDropbox } from 'react-icons/fa';
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'wouter';
 import { Card,CardAction,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card';
 import { Tabs,TabsContent,TabsList,TabsTrigger } from '@radix-ui/react-tabs';
 import { Avatar,AvatarImage,AvatarFallback } from '@radix-ui/react-avatar';
@@ -52,8 +53,11 @@ const PRODUCTS = [
 // ]
 
 export default function Home() {
-	const [activeTab, setActiveTab] = useState('about');
+	const [searchParams, setSearchParams] = useSearchParams();
+	const [tabFromQuery, setTabFromQuery] = useState<string | null>(searchParams.get('tab'));
 
+	const [activeTab, setActiveTab] = useState('about');
+	
 	return (
 		<div className="min-h-screen bg-black overflow-hidden select-none">
 			{/* Hero Section with FallingPattern */}
@@ -77,14 +81,14 @@ export default function Home() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, delay: 0.3 }}
 				>
-					<Tabs defaultValue="about" value={activeTab} onValueChange={setActiveTab} className="w-full">
+					<Tabs value={tabFromQuery? tabFromQuery : activeTab} onValueChange={setActiveTab} className="w-full">
 						<TabsList className='bg-black rounded-md p-1 border-[1px] border-[#00FF00]'>
-							<TabsTrigger value="about" className='m-2'>Home</TabsTrigger>
-							<TabsTrigger value="shop" className='m-2'>Shop</TabsTrigger>
+							<TabsTrigger value="about" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Home</TabsTrigger>
+							<TabsTrigger value="shop" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Shop</TabsTrigger>
+							<TabsTrigger value="beats" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Free Beats</TabsTrigger>
 						</TabsList>
 						<br />
 						<TabsContent value="about">
-
 							<Card>
 								<CardHeader>
 									<CardTitle>I'm nandooxz</CardTitle>
@@ -103,7 +107,7 @@ export default function Home() {
 											<a href={social.url} target={'_blank'}><Button style={{ color: social.color }} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6'>{social.icon} {social.name}</Button></a>
 										)
 									)}
-									<Button onClick={() => setActiveTab("shop")} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white'>Go to Shop <ArrowRight /></Button>
+									<Button onClick={() => {tabFromQuery ? setTabFromQuery("") : undefined; setActiveTab("shop");}} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white'>Go to Shop <ArrowRight /></Button>
 								</CardContent>
 								<CardFooter>
 									<span className='text-gray-600'>&copy; {new Date().getFullYear()} nandooxz</span>
@@ -112,6 +116,7 @@ export default function Home() {
 							</Card>
 
 						</TabsContent>
+						
 						<TabsContent value="shop" className=''>
 							<Card className='max-h-[500px] overflow-y-scroll p-3'>
 								<CardHeader>
@@ -154,13 +159,24 @@ export default function Home() {
 								<br/><br/>
 								<CardFooter >
 									<div className="flex flex-row gap-2 items-center">
-										<Button onClick={() => setActiveTab("about")} className='bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white w-[40%]'>Go Back <ArrowLeft /></Button>
+										<Button onClick={() => {tabFromQuery ? setTabFromQuery("") : undefined; setActiveTab("about");}} className='bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white w-[40%]'>Go Back <ArrowLeft /></Button>
 										<span className='text-gray-600 text-[0.7em] text-right'>All payments are processed securely through Payhip.</span>
 									</div>
 								</CardFooter>
-								
 							</Card>
-
+						</TabsContent>
+						
+						<TabsContent value="beats">
+							<Card>
+								<CardHeader>
+									<CardTitle>FREE BEATS - {new Date().toLocaleDateString('default', {month: 'long',year:'numeric'})}</CardTitle>
+								</CardHeader>
+								<CardContent className='flex flex-col justify-center items-center gap-3'>
+									<a href="https://www.dropbox.com/scl/fo/swerswe6415dw31t15mwg/ADsvP8e6ST0Mz1fJSXvYDGU?rlkey=3ih75582ovg5fvd0smvuspxi7&st=05i8h1wv&dl=0"><Button className='bg-blue-500 p-7 w-full text-[1em] hover:bg-blue-700 text-white'><FaDropbox/> Download on Dropbox</Button></a>
+									<br /><br />
+									<p className='text-sm text-gray-600'>For Profit/Non-Profit use. You MUST credit me (@prod.nandooxz).</p>
+								</CardContent>
+							</Card>
 						</TabsContent>
 					</Tabs>
 					<br />
