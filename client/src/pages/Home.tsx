@@ -41,7 +41,7 @@ const SOCIALS = [
 ];
 
 const PRODUCTS = [
-	{name: 'Stash Kit 2026', url: 'https://payhip.com/buy?link=nYZcL', price:'$5', cover:'https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg'},
+	{name: 'Stash Kit 2026', url: 'https://payhip.com/buy?link=nYZcL', price:'$7.99', cover:'https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg'},
 	{name: 'June Loop Kit', url: 'https://payhip.com/buy?link=28lcX', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jrmcbfcr10b1eq1fnr13q61s3e1a.jpg'},
 	{name: '1K Drum Kit', url: 'https://payhip.com/buy?link=KVS5a', price: '$0', cover: 'https://payhip.com/cdn-cgi/image/format=auto,width=120/https://pe56d.s3.amazonaws.com/o_1jpghhvho19slj6b1keup8r19991f.png'},
 ]
