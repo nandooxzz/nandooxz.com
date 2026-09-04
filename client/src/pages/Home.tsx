@@ -2,7 +2,7 @@ import { color, motion } from 'framer-motion';
 import { FallingPattern } from '@/components/ui/falling-pattern';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { FaSpotify, FaInstagram, FaYoutube, FaSoundcloud, FaDropbox } from 'react-icons/fa';
+import { FaSpotify, FaInstagram, FaYoutube, FaDropbox, FaTelegram } from 'react-icons/fa';
 
 
 import { useState, useEffect } from 'react';
@@ -33,6 +33,8 @@ import { Link } from 'wouter';
  */
 
 const SOCIALS = [
+	{ name: 'FREE BEATS', url: 'https://t.me/nandooxz', color: '#0088cc', icon: <FaTelegram/> },
+	{ name: 'FREE LOOPS', url: 'https://t.me/nandooxzloops', color: '#0088cc', icon: <FaTelegram/> },
 	{ name: 'Spotify', url: 'https://open.spotify.com/artist/3XQcfKwJ2V7A953V4BbI0H', color: '#00FF00', icon: <FaSpotify /> },
 	{ name: 'Youtube', url: 'https://www.youtube.com/@prod.nandooxz', color: '#fb2c36', icon: <FaYoutube /> },
 	{ name: 'Instagram', url: 'https://www.instagram.com/prod.nandooxz/', color: '#f0f0f0', icon: <FaInstagram /> },
@@ -160,19 +162,6 @@ export default function Home() {
 										<span className='text-gray-600 text-[0.7em] text-right'>All payments are processed securely through Payhip.</span>
 									</div>
 								</CardFooter>
-							</Card>
-						</TabsContent>
-						
-						<TabsContent value="beats">
-							<Card>
-								<CardHeader>
-									<CardTitle>FREE BEATS - {new Date().toLocaleDateString('default', {month: 'long',year:'numeric'})}</CardTitle>
-								</CardHeader>
-								<CardContent className='flex flex-col justify-center items-center gap-3'>
-									<a href="https://www.dropbox.com/scl/fo/swerswe6415dw31t15mwg/ADsvP8e6ST0Mz1fJSXvYDGU?rlkey=3ih75582ovg5fvd0smvuspxi7&st=05i8h1wv&dl=0"><Button className='bg-blue-500 p-7 w-full text-[1em] hover:bg-blue-700 text-white'><FaDropbox/> Download on Dropbox</Button></a>
-									<br /><br />
-									<p className='text-sm text-gray-600'>For Profit/Non-Profit use. You MUST credit me (@prod.nandooxz).</p>
-								</CardContent>
 							</Card>
 						</TabsContent>
 					</Tabs>
