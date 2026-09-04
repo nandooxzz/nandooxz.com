@@ -85,7 +85,6 @@ export default function Home() {
 						<TabsList className='bg-black rounded-md p-1 border-[1px] border-[#00FF00]'>
 							<TabsTrigger value="about" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Home</TabsTrigger>
 							<TabsTrigger value="shop" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Shop</TabsTrigger>
-							<TabsTrigger value="beats" className='m-2' onClick={tabFromQuery ? () => setTabFromQuery("") : undefined}>Free Beats</TabsTrigger>
 						</TabsList>
 						<br />
 						<TabsContent value="about">
