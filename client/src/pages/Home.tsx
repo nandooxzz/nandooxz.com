@@ -33,8 +33,7 @@ import { Link } from 'wouter';
  */
 
 const SOCIALS = [
-	{ name: 'FREE BEATS', url: 'https://t.me/nandooxz', color: '#0088cc', icon: <FaTelegram/> },
-	{ name: 'FREE LOOPS', url: 'https://t.me/nandooxzloops', color: '#0088cc', icon: <FaTelegram/> },
+	{ name: 'BEATS & LOOPS FOR YOU', url: 'https://www.dropbox.com/scl/fo/as4gijs8p2tg8s7fek41s/AJpCOwvHKap6VWiAHhNqJwc?rlkey=ingenln9a83loq99r2zy643we&st=psp2g0t4&dl=0', color: '#0088cc', icon: <FaDropbox/> },
 	{ name: 'Spotify', url: 'https://open.spotify.com/artist/3XQcfKwJ2V7A953V4BbI0H', color: '#00FF00', icon: <FaSpotify /> },
 	{ name: 'Youtube', url: 'https://www.youtube.com/@prod.nandooxz', color: '#fb2c36', icon: <FaYoutube /> },
 	{ name: 'Instagram', url: 'https://www.instagram.com/prod.nandooxz/', color: '#f0f0f0', icon: <FaInstagram /> },
