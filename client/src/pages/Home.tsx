@@ -100,7 +100,7 @@ export default function Home() {
 								</CardHeader>
 								<CardContent className='flex flex-col gap-2'>
 									<a href={'https://www.beatstars.com/prodnandooxz'} target={'_blank'}><Button className='w-full bg-red-700 hover:bg-red-950 border-red-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#ffffff"><path fill="#fff" d="m17.217 11.996l-3.308 1.079v3.478l-2.052-2.818l-3.309 1.079l2.043-2.818l-2.043-2.819l3.31 1.08l2.05-2.819v3.487zm0 0v7.277H6.854V4.584h10.363zl4.585-1.49v-7.67L19.135 0H2.198v24h16.92l2.684-2.685v-7.83z"/></svg> BEATSTARS</Button></a>
-									<a href={'https://kits.nandooxz.com'} target={'_blank'}><Button className='w-full hover:bg-gray-700 bg-black border-gray-700 border-[1px] p-6 text-white'><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg" alt="Stash Kit Cover" className="w-[32px] rounded-md"/> STASH KIT</Button></a>
+									<a href={'https://kits.nandooxz.com'} target={'_blank'}><Button className='w-full hover:bg-gray-700 bg-black border-gray-700 border-[1px] p-6 text-white'><img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jt6h9vms151c9631denkdl15od1f.jpg" alt="Stash Kit Cover" className="w-[32px] rounded-md"/> STASH KIT</Button></a>
 									{SOCIALS.map((social) => (
 											<a href={social.url} target={'_blank'}><Button style={{ color: social.color }} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6'>{social.icon} {social.name}</Button></a>
 										)
