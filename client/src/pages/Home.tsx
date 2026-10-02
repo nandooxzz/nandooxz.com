@@ -105,7 +105,7 @@ export default function Home() {
 											<a href={social.url} target={'_blank'}><Button style={{ color: social.color }} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6'>{social.icon} {social.name}</Button></a>
 										)
 									)}
-									<Button onClick={() => {tabFromQuery ? setTabFromQuery("") : undefined; setActiveTab("shop");}} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white'>Go to Shop <ArrowRight /></Button>
+									{/* <Button onClick={() => {tabFromQuery ? setTabFromQuery("") : undefined; setActiveTab("shop");}} className='w-full bg-black hover:bg-black hover:border-[#00ff005d] border-transparent border-[1px] p-6 text-white'>Go to Shop <ArrowRight /></Button> */}
 								</CardContent>
 								<CardFooter>
 									<span className='text-gray-600'>&copy; {new Date().getFullYear()} nandooxz</span>
